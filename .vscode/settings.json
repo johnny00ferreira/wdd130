@@ -8,6 +8,8 @@
   "editor.defaultFormatter": "vscode.html-language-features",
   "editor.minimap.enabled": false,
   "editor.linkedEditing": true,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.tabs.enabled": true,
  
   "editor.quickSuggestions": {
     "comments": "off",
