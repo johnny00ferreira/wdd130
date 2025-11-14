@@ -1,0 +1,162 @@
+:root{
+  --primary-color: #03558c;         
+  --secondary-color: #f4a261;       
+  --accent1-color: #162634;          
+  --accent2-color: #e9c46a;         
+  --heading-font: "Times New Roman", Georgia, serif;
+  --body-font: Arial, Helvetica, sans-serif;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+  background: #ffffff;
+}
+
+
+header, main, footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+
+nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
+}
+
+.socialmedia a {
+  text-decoration: none;
+}
+
+/* ---------- HERO (div principal com sobreposições) ---------- */
+
+/* torne o container relativo para posicionamento absoluto dos filhos */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100px; /* ajuste se precisar mais/menos espaço de fundo */
+  background-image: url("../images/fundo-rafting.jpg"); /* caminho relativo */
+  background-size: cover;
+  background-position: right 18%; /* mostra mais topo da imagem por padrão */
+  overflow: hidden;
+}
+
+/* garante que a imagem usada como <img> dentro da hero preencha a largura do container
+   (se você usar <img> em vez de background-image) */
+.hero img {
+  display: block ;
+  width: 100%;
+  height: auto;
+}
+
+/* Título posicionado sobre a imagem (conforme solicitado) */
+.hero h1 {
+  position: relative;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.7;
+  background-color: var(--accent1-color);
+  color: #fff;
+  z-index: 20;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+}
+
+/* Artigo posicionado sobre a hero (faixa/overlay).
+   Você pediu posicionamento absoluto para article; aqui colocamos no rodapé da hero. */
+.hero article {
+  position: absolute;
+  left: 16px;              
+  right: 16px;
+  bottom: 24px;            
+  background-color: rgba(22,38,52,0.72);
+  color: #f2f6f8;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 18;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.26);
+}
+
+/* imagem dentro do article: flutua à direita com largura fixa (125px conforme pedido) */
+.hero article img {
+  float: right;
+  width: 125px;   /* conforme especificado */
+  height: auto;
+  margin-left: 16px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.06);
+}
+
+
+/* ---------- Estilos extras para seções e rodapé ---------- */
+h2 {
+  margin-top: 24px;
+  padding: 10px;
+  background: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+}
+
+footer {
+  margin-top: 24px;
+  padding: 18px 0;
+  text-align: center;
+  color: var(--accent1-color);
+}
+
+
+.socialmedia {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.socialmedia img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+
+@media (max-width: 900px) {
+  header, main, footer { width: 94%; }
+  .hero { height: 720px; background-position: center 30%; }
+  .hero article {
+    left: 10px;
+    right: 10px;
+    bottom: 16px;
+    padding: 14px;
+    flex-direction: column-reverse; 
+    align-items: center;
+    gap: 12px;
+  }
+  .hero article img {
+    float: none;
+    margin: 0 auto 8px;
+    width: 45%;
+    max-width: 220px;
+  }
+  .hero h1 { font-size: 1.3rem; padding: 10px; }
+}
+
