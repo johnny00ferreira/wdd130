@@ -46,14 +46,12 @@ nav, p, section, article {
 .hero {
   position: relative;
   width: 100%;
-  min-height: 150px;                 
-  height: auto;                      
-  padding: 32px 0  ;                   
-  background-image: url("../images/fundo-rafting.jpg"); 
+  min-height: 150px;
+  height: auto;
+  padding: 32px 0;
+  background-image: url("../images/fundo-rafting.jpg");
   background-size: cover;
   background-position: center center;
-  
-
 }
 
 
