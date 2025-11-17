@@ -1,11 +1,12 @@
-:root{
-  --primary-color: #03558c;         
-  --secondary-color: #f4a261;       
-  --accent1-color: #162634;          
-  --accent2-color: #e9c46a;         
+:root {
+  --primary-color: #03558c;
+  --secondary-color: #f4a261;
+  --accent1-color: #162634;
+  --accent2-color: #e9c46a;
   --heading-font: "Times New Roman", Georgia, serif;
   --body-font: Arial, Helvetica, sans-serif;
 }
+
 
 
 * {
@@ -15,10 +16,10 @@
 }
 
 body {
-  font-family: var(--body-font);
-  color: var(--accent1-color);
-  background: #ffffff;
+  background-color: var(--primary-color);
+  color: var(--accent2-color);
 }
+
 
 
 header, main, footer {
@@ -27,16 +28,16 @@ header, main, footer {
 }
 
 
-h1, h2 {
+h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
-  color: var(--primary-color);
 }
 
 
-nav, p, section, article {
-  margin: 16px;
-  padding: 8px;
+
+p, a, li, span, div {
+  font-family: var(--body-font);
 }
+
 
 .socialmedia a {
   text-decoration: none;
@@ -87,7 +88,6 @@ nav, p, section, article {
   left: 16px;
   right: 16px;
   bottom: 24px;
-  display: flex;
   align-items: stretch;
   gap: 18px;
   padding: 0;
@@ -129,6 +129,7 @@ nav, p, section, article {
 
 
 .hero article img {
+  float: right;
   display: block;
   height: 100%;
   width: auto;
