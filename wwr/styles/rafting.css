@@ -82,29 +82,27 @@ p, a, li, span, div {
   line-height: 1.1;
 }
 
-
 .hero article {
-  position: absolute;
-  left: 16px;
-  right: 16px;
-  bottom: 24px;
-  align-items: stretch;
-  gap: 18px;
-  padding: 0;
-  background-color: rgba(22,38,52,0.72);
-  color: #f2f6f8;
-  border-radius: 8px;
-  z-index: 18;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.26);
-  overflow: hidden;
-  min-height: 140px;
-  max-width: calc(100% - 32px);
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 24px;
+    gap: 18px;
+    padding: 0;
+    background-color: rgba(22,38,52,0.72);
+    color: #f2f6f8;
+    border-radius: 8px;
+    z-index: 18;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.26);
+    overflow: hidden;
+    min-height: 140px;
+    max-width: calc(100% - 32px);
 }
+
 
 .hero article .text {
   flex: 1 1 auto;
   padding: 10px 8px;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 8px;
