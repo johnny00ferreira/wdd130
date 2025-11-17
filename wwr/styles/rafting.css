@@ -81,7 +81,7 @@ nav, p, section, article {
   line-height: 1.1;
 }
 
-/* ---------- Article overlay (texto à esquerda / imagem à direita) ---------- */
+
 .hero article {
   position: absolute;
   left: 16px;
@@ -127,19 +127,19 @@ nav, p, section, article {
   opacity: 0.95;
 }
 
-/* Imagem sobreposta: fica à direita, ocupa a altura total da caixa */
+
 .hero article img {
   display: block;
   height: 100%;
   width: auto;
-  max-width: 150px;    /* ajuste para 125px se quiser largura fixa */
+  max-width: 150px;   
   object-fit: cover;
   border-left: 2px solid rgba(255,255,255,0.06);
   border-radius: 0;
   flex: 0 0 auto;
 }
 
-/* ---------- Responsividade ---------- */
+
 @media (max-width: 900px) {
   header, main, footer { width: 94%; }
   .hero {
@@ -204,3 +204,14 @@ footer {
   text-align: center;
   color: var(--accent1-color);
 }
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+
+footer {
+  background-color: var(--accent2-color);
+}
+
