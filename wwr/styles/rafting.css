@@ -1,0 +1,216 @@
+:root {
+  --primary-color: #03558c;
+  --secondary-color: #d1cfcd;
+  --accent1-color: #162634;
+  --accent2-color: #e9c46a;
+  --heading-font: "Times New Roman", Georgia, serif;
+  --body-font: Arial, Helvetica, sans-serif;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--accent2-color);
+}
+
+
+
+header, main, footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+}
+
+
+
+p, a, li, span, div {
+  font-family: var(--body-font);
+}
+
+
+.socialmedia a {
+  text-decoration: none;
+}
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 150px;
+  height: auto;
+  padding: 32px 0;
+  background-image: url("../images/fundo-rafting.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+.hero h1 {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  margin: 0;
+  padding: 14px 18px;
+  text-align: center;
+  background-color: rgba(22,38,52,0.72);
+  color: #f2f6f8;
+  z-index: 25;
+  font-size: 1.6rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.26);
+  opacity: 0.95;
+  box-sizing: border-box;
+  line-height: 1.1;
+}
+
+.hero article {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 24px;
+    gap: 18px;
+    padding: 0;
+    background-color: rgba(22,38,52,0.72);
+    color: #f2f6f8;
+    border-radius: 8px;
+    z-index: 18;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.26);
+    overflow: hidden;
+    min-height: 140px;
+    max-width: calc(100% - 32px);
+}
+
+
+.hero article .text {
+  flex: 1 1 auto;
+  padding: 10px 8px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.hero article .text h3,
+.hero article .text p {
+  margin: 0;
+  color: #f2f6f8;
+}
+.hero article .text h3 {
+  font-size: 1.2rem;
+  font-family: var(--heading-font);
+}
+.hero article .text p {
+  font-size: 0.95rem;
+  line-height: 1.35;
+  opacity: 0.95;
+}
+
+
+.hero article img {
+  float: right;
+  display: block;
+  height: 100%;
+  width: auto;
+  max-width: 150px;   
+  object-fit: cover;
+  border-left: 2px solid rgba(255,255,255,0.06);
+  border-radius: 0;
+  flex: 0 0 auto;
+}
+
+
+@media (max-width: 900px) {
+  header, main, footer { width: 94%; }
+  .hero {
+    min-height: 520px;
+    background-position: center 30%;
+    padding: 18px 0;
+  }
+  .hero h1 {
+    top: 12px;
+    left: 10px;
+    right: 10px;
+    padding: 10px;
+    font-size: 1.40rem;
+    border-radius: 6px;
+  }
+  .hero article {
+    left: 10px;
+    right: 10px;
+    bottom: 30px;
+    min-height: auto;
+    max-width: 100%;
+  }
+  .hero article img {
+    width: 100%;
+    border-top: 2px solid rgba(255,255,255,0.06);
+  }
+  .hero article .text {
+    padding: 8px;
+    text-align: right;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero article {
+    left: 10px;
+    right: 10px;
+    bottom: 16px;
+    align-items: stretch;
+    min-height: auto;
+    max-height: none;
+  }
+
+  .hero article .text {
+    padding: 12px;
+    text-align: center;
+  }
+}
+
+
+h2 {
+  margin-top: 24px;
+  padding: 10px;
+  background: var(--primary-color);
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+}
+
+footer {
+  margin-top: 24px;
+  padding: 18px 0;
+  text-align: center;
+  color: var(--accent1-color);
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+
+footer {
+  background-color: var(--accent2-color);
+}
+
