@@ -182,11 +182,13 @@ h2 {
   border-radius: 4px;
 }
 
+
 footer {
   margin-top: 24px;
   padding: 18px 0;
   text-align: center;
   color: var(--accent1-color);
+  background-color: var(--accent2-color);
 }
 
 a {
@@ -194,6 +196,3 @@ a {
   text-decoration: none;
 }
 
-footer {
-  background-color: var(--accent2-color);
-}
