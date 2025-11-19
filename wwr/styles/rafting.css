@@ -157,7 +157,7 @@ p, a, li, span, div {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px){
   .hero article {
     left: 10px;
     right: 10px;
@@ -166,33 +166,6 @@ p, a, li, span, div {
     min-height: auto;
     max-height: none;
   }
-
-  .hero article .text {
-    padding: 12px;
-    text-align: center;
   }
-}
 
-h2 {
-  margin-top: 24px;
-  padding: 10px;
-  background: var(--primary-color);
-  color: #fff;
-  text-align: center;
-  border-radius: 4px;
-}
-
-
-footer {
-  margin-top: 24px;
-  padding: 18px 0;
-  text-align: center;
-  color: var(--accent1-color);
-  background-color: var(--accent2-color);
-}
-
-a {
-  color: var(--secondary-color);
-  text-decoration: none;
-}
 
