@@ -168,6 +168,7 @@ p, a, li, span, div {
   }
   }
 
+
 footer {
   margin-top: 24px;
   padding: 18px 0;
@@ -175,6 +176,7 @@ footer {
   color: var(--accent1-color);
   background-color: var(--accent2-color);
 }
+
 
 
 
