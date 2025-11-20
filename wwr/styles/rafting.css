@@ -3,13 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-:root {
-    --primary-color: #03558c;
-    --secondary-color: #d1cfcd;
-    --accent1-color: #162634;
-    --accent2-color: #e9c46a;
-    --heading-font: "Times New Roman", Georgia, serif;
-    --body-font: Arial, Helvetica, sans-serif;
+:root{
+  --primary-color: #03558c;
+  --secondary-color: #d1cfcd;
+  --accent1-color : #162534;
+  --accent2-color: #e9c46a;
+  --heading-font : "times new roman", georgia,serif;
+  --body-font: arial,helvetica,sans-serif; 
 }
 
 body {
