@@ -1,144 +1,151 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="Living the Extraordinary - aventuras de rafting seguras e inesquecíveis" />
-    <meta name="author" content="Johnny Ferreira da Silva" />
-    <link rel="stylesheet" href="styles/rafting.css" />
-    <title>Sobre Nós — Living the Extraordinary</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Living the Extraordinary — professional and safe whitewater rafting adventures.">
+    <meta name="author" content="Johnny Ferreira da Silva">
+    <link rel="stylesheet" href="styles/rafting.css">
+    <title>About Us — Living the Extraordinary</title>
 </head>
 
 <body>
 
-    <a class="skip-link" href="#maincontent">Pular para o conteúdo</a>
+    <a class="skip-link" href="#maincontent">Skip to content</a>
 
-    <!-- HEADER (Grid: logo à esquerda, nav à direita) -->
-    <header class="site-header" role="banner">
+    <!-- HEADER (grid layout: logo left, nav/right content right) -->
+    <header class="site-header">
         <div class="logo-wrap">
-            <a href="index.html" aria-label="Página inicial">
-                <img src="images/logo-rafting.png" alt="Logotipo Living the Extraordinary" width="120" height="120">
+            <a href="index.html" aria-label="Go to home page">
+                <img src="images/logo-rafting.png" alt="Rafting Logo" width="120" height="120">
             </a>
         </div>
 
-        <!-- nav e título alinhados à direita (grid coloca aqui) -->
         <div class="header-right">
             <div class="site-title">
                 <h1>Living the Extraordinary</h1>
                 <p class="tagline">Pushing limits, paddling together</p>
             </div>
 
-            <nav class="main-nav" role="navigation" aria-label="Navegação principal">
+            <!-- NAV (flex horizontal) -->
+            <nav class="main-nav" aria-label="Main navigation">
                 <ul class="navigation">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" aria-current="page">Sobre nós</a></li>
-                    <li><a href="trips.html">Viagens</a></li>
-                    <li><a href="contact.html">Contato</a></li>
+                    <li><a href="about.html" aria-current="page">About Us</a></li>
+                    <li><a href="trips.html">Trips</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- MAIN -->
+    <!-- MAIN CONTENT -->
     <main id="maincontent">
-        <!-- HERO / About -->
-        <section class="hero" aria-label="Sobre a empresa">
+
+        <!-- HERO -->
+        <section class="hero" aria-label="About section">
             <div class="hero-inner">
+
                 <article class="hero-article">
                     <div class="text">
-                        <h2>Sobre nós</h2>
-                        <h3>Quem somos</h3>
+                        <h2>About Us</h2>
+                        <h3>Who We Are</h3>
                         <p>
-                            Somos uma equipe de guias e entusiastas que transforma rios e corredeiras em experiências
-                            seguras
-                            e transformadoras. Priorizamos segurança, respeito pela natureza e trabalho em equipe.
+                            Living the Extraordinary is a team of certified guides and river enthusiasts dedicated
+                            to creating authentic, professional, and safe rafting experiences. Our mission is to connect
+                            people with nature through adventure, teamwork, and respect for the environment.
                         </p>
                     </div>
 
-                    <!-- imagem principal (use uma versão otimizada) -->
-                    <img src="images/rafting.jpg" alt="Equipe de rafting remando" width="600" height="360"
-                        loading="lazy" />
+                    <img src="images/rafting.jpg" alt="Rafting team paddling on the river" width="600" height="360"
+                        loading="lazy">
                 </article>
+
             </div>
         </section>
 
-        <!-- HISTORY (organizado conforme wireframe) -->
-        <section class="history" aria-label="História da empresa">
-            <h2>História</h2>
+        <!-- HISTORY -->
+        <section class="history" aria-label="Company history">
+            <h2>History</h2>
+
             <div class="history-grid">
                 <p>
-                    Nascemos do sonho de alguns aventureiros em explorar rios e partilhar experiências que desafiam o
-                    comum.
-                    Em 2018 formalizamos a operação: investimento em equipamentos certificados, treinamento de guias e
-                    foco em
-                    práticas sustentáveis. Desde então ampliamos rotas e mantivemos a missão de inspirar confiança e
-                    coragem.
+                    Living the Extraordinary began as a small group of adventurers passionate about rivers and
+                    outdoor challenges. Over time, their desire to share this passion evolved into a guided rafting
+                    service focused on safety, professionalism, and environmental responsibility.
                 </p>
+
                 <p>
-                    Atualmente oferecemos corridas em diferentes níveis, programas familiares e expedições guiadas. Cada
-                    atividade é preparada com checklists de segurança e atendimento personalizado.
+                    Officially founded in 2018, the company expanded its equipment, training programs, and guiding
+                    certifications. Today, our team continues to offer transformative experiences for individuals,
+                    families, and adventure seekers from around the world.
                 </p>
             </div>
         </section>
 
-        <!-- ADVENTURES (5 figuras alinhadas horizontalmente com figcaption) -->
-        <section class="adventures" aria-label="Aventuras e corredeiras">
-            <h2>Aventura te espera!</h2>
+        <!-- ADVENTURES -->
+        <section class="adventures" aria-label="Rafting adventures">
+            <h2>Adventure Awaits You!</h2>
 
-            <div class="gallery" aria-hidden="false">
+            <div class="gallery">
+
                 <figure>
-                    <img src="images/figure1.jpg" alt="Los Dientes del Diablo - corredeira" loading="lazy" width="400"
-                        height="260">
+                    <img src="images/figure1.jpg" alt="Los Dientes del Diablo rapid" width="400" height="260"
+                        loading="lazy">
                     <figcaption>Los Dientes del Diablo</figcaption>
                 </figure>
 
                 <figure>
-                    <img src="images/figure2.jpg" alt="Big Mallard - corredeira" loading="lazy" width="400"
-                        height="260">
+                    <img src="images/figure2.jpg" alt="Big Mallard rapid" width="400" height="260" loading="lazy">
                     <figcaption>Big Mallard</figcaption>
                 </figure>
 
                 <figure>
-                    <img src="images/figure3.jpg" alt="Half Day Adventure - passeio de meio dia" loading="lazy"
-                        width="400" height="260">
+                    <img src="images/figure3.jpg" alt="Half Day Adventure rafting" width="400" height="260"
+                        loading="lazy">
                     <figcaption>Half Day Adventure</figcaption>
                 </figure>
 
                 <figure>
-                    <img src="images/figure4.jpg" alt="Upper Rapids - corredeira superior" loading="lazy" width="400"
-                        height="260">
+                    <img src="images/figure4.jpg" alt="Upper Rapids whitewater" width="400" height="260" loading="lazy">
                     <figcaption>Upper Rapids</figcaption>
                 </figure>
 
                 <figure>
-                    <img src="images/figure5.jpg" alt="Family Float - passeio para família" loading="lazy" width="400"
-                        height="260">
+                    <img src="images/figure5.jpg" alt="Family Float rafting trip" width="400" height="260"
+                        loading="lazy">
                     <figcaption>Family Float</figcaption>
                 </figure>
+
             </div>
         </section>
+
     </main>
 
     <!-- FOOTER -->
-    <footer role="contentinfo">
+    <footer>
         <div class="footer-inner">
             <p class="copyright">© 2025 Living the Extraordinary</p>
 
-            <nav class="socialmedia" aria-label="Redes sociais">
+            <nav class="socialmedia" aria-label="Social media links">
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                     <img src="images/socialmedia-facebook.png" alt="Facebook" width="36" height="36">
                 </a>
+
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <img src="images/socialmedia-linkedin.png" alt="LinkedIn" width="36" height="36">
                 </a>
+
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                     <img src="images/socialmedia-instagram.png" alt="Instagram" width="36" height="36">
                 </a>
             </nav>
         </div>
 
-        <p class="developer">Desenvolvido por Johnny Ferreira Da Silva</p>
+        <p class="developer">Developed by Johnny Ferreira Da Silva</p>
     </footer>
 
-    <
+</body>
+
+</html>
