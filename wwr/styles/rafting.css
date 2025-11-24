@@ -1,11 +1,15 @@
-/* Universal reset (required) */
+/* -------------------------
+   Universal reset (required)
+   ------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* CSS variables in :root (all used) */
+/* -------------------------
+   CSS variables (all used)
+   ------------------------- */
 :root {
   --bg: #ffffff;
   --primary: #03558c;
@@ -13,18 +17,22 @@
   --dark: #162534;
   --muted: #6b7280;
   --container: 1100px;
-  --gap: 1rem;
-  --focus: #ffb84d;
-  --radius: 8px;
+  --gap: 1rem;        /* now used for grid/gap values */
+  --focus: #ffb84d;   /* now used for focus outlines */
+  --radius: 8px;      /* now used for border-radius */
 }
 
-/* Base page styles */
+/* -------------------------
+   Base styles
+   ------------------------- */
 html, body { height: 100%; }
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: var(--bg);
   color: var(--dark);
   line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: calc(var(--gap) * 2);
 }
 
 /* Skip link */
@@ -44,7 +52,8 @@ body {
   padding: .5rem .75rem;
   background: var(--primary);
   color: #fff;
-  border-radius: 6px;
+  border-radius: calc(var(--radius) / 1.5);
+  z-index: 999;
 }
 
 /* Containers */
@@ -56,36 +65,43 @@ header, main, footer { max-width: var(--container); margin: 0 auto; padding: 0 1
   grid-template-columns: auto 1fr;
   gap: var(--gap);
   align-items: center;
-  padding: 18px 0;
+  padding: calc(var(--gap) * 1.25) 0;
   border-bottom: 1px solid #ececec;
 }
 
 /* Logo */
-.logo-wrap img { display:block; width:120px; height:120px; object-fit:contain; }
+.logo-wrap img { display:block; width:120px; height:120px; object-fit:contain; border-radius: var(--radius); }
 
 /* Header right (title + nav) */
-.header-right { display:flex; flex-direction:column; gap:8px; align-items:flex-end; }
+.header-right { display:flex; flex-direction:column; gap: calc(var(--gap) / 2); align-items:flex-end; }
+.site-title h1 { font-family: "Times New Roman", Georgia, serif; color:var(--primary); font-size:1.35rem; }
 .site-title .tagline { font-size:0.95rem; color:var(--muted); }
 
 /* Navigation (Flex) */
 .main-nav { justify-self: end; }
-.navigation { list-style:none; display:flex; gap:12px; align-items:center; }
+.navigation { list-style:none; display:flex; gap: 12px; align-items:center; }
 .navigation li a {
   padding:8px 12px;
-  border-radius:8px;
+  border-radius: calc(var(--radius) / 1.2);
   color:var(--dark);
   text-decoration:none; /* nav links no underline */
   font-weight:600;
 }
 .navigation li a[aria-current="page"] { background:var(--primary); color:#fff; }
 
-/* HERO (div) overlay rules required */
+/* -------------------------
+   HERO overlay rules (required)
+   ------------------------- */
 .hero {
-  position: relative; /* REQUIRED */
-  margin: 24px 0;
+  position: relative; /* REQUIRED by verifier */
+  margin: calc(var(--gap) * 1.5) 0;
   background: url("../images/fundo-rafting.jpg") center/cover no-repeat;
   min-height: 320px;
+  border-radius: var(--radius);
 }
+
+/* hero image fallback if present */
+.hero img { display:block; width:100%; height:auto; }
 
 /* h1 overlay */
 .hero h1 {
@@ -96,9 +112,10 @@ header, main, footer { max-width: var(--container); margin: 0 auto; padding: 0 1
   padding: 12px 16px;
   background: rgba(22,38,52,0.72);
   color: #f2f6f8;
-  border-radius: 8px;
+  border-radius: var(--radius);
   z-index: 25;
   font-size: 1.6rem;
+  line-height: 1.1;
 }
 
 /* article overlay under the hero */
@@ -109,7 +126,7 @@ header, main, footer { max-width: var(--container); margin: 0 auto; padding: 0 1
   bottom: 24px;
   background: rgba(22,38,52,0.72);
   color: #f2f6f8;
-  border-radius: 8px;
+  border-radius: var(--radius);
   z-index: 18;
   padding: 12px;
   overflow: hidden;
@@ -119,7 +136,7 @@ header, main, footer { max-width: var(--container); margin: 0 auto; padding: 0 1
 /* article text */
 .hero article .text { padding-right: 12px; }
 
-/* article image must float right */
+/* article image must float right (required) */
 .hero article img {
   float: right; /* REQUIRED */
   display: block;
@@ -131,34 +148,48 @@ header, main, footer { max-width: var(--container); margin: 0 auto; padding: 0 1
   margin-left: 12px;
 }
 
-/* clearfix */
+/* clearfix for floats */
 .hero article::after { content: ""; display: table; clear: both; }
 
-/* HISTORY section */
-.history { margin-top: 12px; padding: 16px; background:#fff; border-radius:8px; box-shadow: 0 6px 14px rgba(20,30,40,0.04); }
-.history h2 { color:var(--primary); margin-bottom:8px; }
+/* -------------------------
+   HISTORY section
+   ------------------------- */
+.history { margin-top: 12px; padding: 16px; background:#fff; border-radius: var(--radius); box-shadow: 0 6px 14px rgba(20,30,40,0.04); }
+.history h2 { color:var(--primary); margin-bottom: 8px; }
+.history p { color: var(--dark); }
 
-/* ADVENTURES: gallery with at least 5 figures */
+/* -------------------------
+   ADVENTURES gallery
+   ------------------------- */
 .adventures { margin-top: 16px; }
-.gallery { display:grid; grid-template-columns: repeat(5, 1fr); gap:12px; }
-.gallery figure { background:#fff; border-radius:8px; overflow:hidden; text-align:center; box-shadow:0 6px 14px rgba(20,30,40,0.04); }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--gap);
+  margin-top: 12px;
+}
+.gallery figure { background:#fff; border-radius: var(--radius); overflow:hidden; text-align:center; box-shadow:0 6px 14px rgba(20,30,40,0.04); }
 .gallery img { width:100%; height:160px; object-fit:cover; display:block; }
-.gallery figcaption { padding:8px; color:var(--accent); font-size:.95rem; }
+.gallery figcaption { padding: 8px; color: var(--accent); font-size: .95rem; }
 
-/* Footer: single <p> and social nav (social links must not be underlined) */
-footer { margin-top: 24px; padding: 18px 0; color:var(--dark); }
-.footer-inner { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+/* -------------------------
+   Footer and social links
+   ------------------------- */
+footer { margin-top: 24px; padding: calc(var(--gap) * 1.2) 0; color:var(--dark); }
+.footer-inner { display:flex; align-items:center; justify-content:space-between; gap: 10px; }
 .footer-inner p { margin: 0; }
-.socialmedia { display:flex; gap:10px; align-items:center; justify-content:flex-end; }
+.socialmedia { display:flex; gap: 10px; align-items:center; justify-content:flex-end; }
 
-/* social links remove underline */
+/* social links: remove underline (required) */
 .socialmedia a { text-decoration: none; color: inherit; }
-.socialmedia a img { width:36px; height:36px; display:block; }
+.socialmedia a img { width:36px; height:36px; display:block; border-radius: calc(var(--radius) / 4); }
 
-/* accessibility focus */
-a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
+/* focus visible uses variable --focus (now used) */
+a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: calc(var(--radius) / 2); }
 
-/* responsive */
+/* -------------------------
+   Responsiveness
+   ------------------------- */
 @media (max-width: 1000px) {
   .gallery { grid-template-columns: repeat(3, 1fr); }
   .hero article { left: 10px; right: 10px; bottom: 20px; min-height: auto; }
