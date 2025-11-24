@@ -14,7 +14,7 @@
 
     <a class="skip-link" href="#maincontent">Skip to content</a>
 
-    <!-- HEADER (grid layout: logo left, nav/right content right) -->
+    <!-- HEADER (grid: logo left, nav right) -->
     <header class="site-header">
         <div class="logo-wrap">
             <a href="index.html" aria-label="Go to home page">
@@ -24,7 +24,7 @@
 
         <div class="header-right">
             <div class="site-title">
-                <h1>Living the Extraordinary</h1>
+                <h1 class="visually-hidden">Living the Extraordinary</h1>
                 <p class="tagline">Pushing limits, paddling together</p>
             </div>
 
@@ -40,56 +40,47 @@
         </div>
     </header>
 
-    <!-- MAIN CONTENT -->
+    <!-- MAIN: hero (div) + exactly two sections -->
     <main id="maincontent">
 
-        <!-- HERO -->
-        <section class="hero" aria-label="About section">
-            <div class="hero-inner">
+        <!-- HERO must be a DIV (not a section) -->
+        <div class="hero" aria-label="Hero about area">
+            <!-- h1 must be inside .hero and overlay the image -->
+            <h1>Living the Extraordinary</h1>
 
-                <article class="hero-article">
-                    <div class="text">
-                        <h2>About Us</h2>
-                        <h3>Who We Are</h3>
-                        <p>
-                            Living the Extraordinary is a team of certified guides and river enthusiasts dedicated
-                            to creating authentic, professional, and safe rafting experiences. Our mission is to connect
-                            people with nature through adventure, teamwork, and respect for the environment.
-                        </p>
-                    </div>
+            <article>
+                <div class="text">
+                    <h2>About Us</h2>
+                    <p>
+                        Living the Extraordinary is a team of certified guides and river enthusiasts dedicated to
+                        creating
+                        authentic, professional, and safe rafting experiences. We connect people with nature through
+                        adventure, teamwork, and respect for the environment.
+                    </p>
+                </div>
 
-                    <img src="images/rafting.jpg" alt="Rafting team paddling on the river" width="600" height="360"
-                        loading="lazy">
-                </article>
+                <!-- article image that will float right -->
+                <img src="images/rafting.jpg" alt="Rafting team paddling on the river" width="600" height="360"
+                    loading="lazy">
+            </article>
+        </div>
 
-            </div>
-        </section>
-
-        <!-- HISTORY -->
+        <!-- Section 1: History (must be the first section) -->
         <section class="history" aria-label="Company history">
             <h2>History</h2>
-
-            <div class="history-grid">
-                <p>
-                    Living the Extraordinary began as a small group of adventurers passionate about rivers and
-                    outdoor challenges. Over time, their desire to share this passion evolved into a guided rafting
-                    service focused on safety, professionalism, and environmental responsibility.
-                </p>
-
-                <p>
-                    Officially founded in 2018, the company expanded its equipment, training programs, and guiding
-                    certifications. Today, our team continues to offer transformative experiences for individuals,
-                    families, and adventure seekers from around the world.
-                </p>
-            </div>
+            <p>
+                Living the Extraordinary began as a small group of adventurers passionate about rivers and outdoor
+                challenges.
+                In 2018 the group formalized operations, invested in certified equipment, and began training
+                professional guides.
+            </p>
         </section>
 
-        <!-- ADVENTURES -->
+        <!-- Section 2: Adventures (must contain at least five figures) -->
         <section class="adventures" aria-label="Rafting adventures">
             <h2>Adventure Awaits You!</h2>
 
             <div class="gallery">
-
                 <figure>
                     <img src="images/figure1.jpg" alt="Los Dientes del Diablo rapid" width="400" height="260"
                         loading="lazy">
@@ -117,33 +108,28 @@
                         loading="lazy">
                     <figcaption>Family Float</figcaption>
                 </figure>
-
             </div>
         </section>
 
     </main>
 
-    <!-- FOOTER -->
+    <!-- FOOTER: contains ONE <p> and a nav for social links (nav + single p allowed) -->
     <footer>
         <div class="footer-inner">
-            <p class="copyright">© 2025 Living the Extraordinary</p>
+            <p>© 2025 Living the Extraordinary | Developed by Johnny Ferreira Da Silva</p>
 
             <nav class="socialmedia" aria-label="Social media links">
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                     <img src="images/socialmedia-facebook.png" alt="Facebook" width="36" height="36">
                 </a>
-
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <img src="images/socialmedia-linkedin.png" alt="LinkedIn" width="36" height="36">
                 </a>
-
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                     <img src="images/socialmedia-instagram.png" alt="Instagram" width="36" height="36">
                 </a>
             </nav>
         </div>
-
-        <p class="developer">Developed by Johnny Ferreira Da Silva</p>
     </footer>
 
 </body>

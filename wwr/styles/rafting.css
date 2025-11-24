@@ -1,19 +1,15 @@
-/* -------------------------
-   Universal reset (obrigatório)
-   ------------------------- */
+/* Universal reset (required) */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* -------------------------
-   CSS variables (all used)
-   ------------------------- */
-:root{
+/* CSS variables in :root (all used) */
+:root {
   --bg: #ffffff;
   --primary: #03558c;
-  --accent: #e9c46a;      /* agora utilizado (e.g., highlights / figcaption) */
+  --accent: #e9c46a;
   --dark: #162534;
   --muted: #6b7280;
   --container: 1100px;
@@ -22,16 +18,13 @@
   --radius: 8px;
 }
 
-/* -------------------------
-   Base styles
-   ------------------------- */
+/* Base page styles */
 html, body { height: 100%; }
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: var(--bg);
   color: var(--dark);
   line-height: 1.45;
-  -webkit-font-smoothing: antialiased;
 }
 
 /* Skip link */
@@ -52,13 +45,12 @@ body {
   background: var(--primary);
   color: #fff;
   border-radius: 6px;
-  z-index: 999;
 }
 
 /* Containers */
 header, main, footer { max-width: var(--container); margin: 0 auto; padding: 0 16px; }
 
-/* Header grid (already required) */
+/* Header grid */
 .site-header {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -71,32 +63,112 @@ header, main, footer { max-width: var(--container); margin: 0 auto; padding: 0 1
 /* Logo */
 .logo-wrap img { display:block; width:120px; height:120px; object-fit:contain; }
 
-/* Header right */
+/* Header right (title + nav) */
 .header-right { display:flex; flex-direction:column; gap:8px; align-items:flex-end; }
-.site-title h1 { font-family: "Times New Roman", Georgia, serif; color:var(--primary); font-size:1.35rem; }
 .site-title .tagline { font-size:0.95rem; color:var(--muted); }
 
-/* Navigation (flex) */
+/* Navigation (Flex) */
 .main-nav { justify-self: end; }
 .navigation { list-style:none; display:flex; gap:12px; align-items:center; }
 .navigation li a {
-  display:inline-flex;
-  align-items:center;
   padding:8px 12px;
   border-radius:8px;
   color:var(--dark);
-  text-decoration:none; /* nav links also no-underline */
+  text-decoration:none; /* nav links no underline */
   font-weight:600;
 }
-.navigation li a:hover, .navigation li a:focus { background: rgba(3,85,140,0.08); outline:none; }
 .navigation li a[aria-current="page"] { background:var(--primary); color:#fff; }
 
-/* -------------------------
-   HERO overlay rules (required by verifier)
-   ------------------------- */
+/* HERO (div) overlay rules required */
 .hero {
-  position: relative;            /* REQUIRED: contains absolutely positioned children */
-  padding: 0;
+  position: relative; /* REQUIRED */
   margin: 24px 0;
-  background: url("../images/fundo-rafting.jpg") cen
+  background: url("../images/fundo-rafting.jpg") center/cover no-repeat;
+  min-height: 320px;
+}
+
+/* h1 overlay */
+.hero h1 {
+  position: absolute; /* REQUIRED */
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  padding: 12px 16px;
+  background: rgba(22,38,52,0.72);
+  color: #f2f6f8;
+  border-radius: 8px;
+  z-index: 25;
+  font-size: 1.6rem;
+}
+
+/* article overlay under the hero */
+.hero article {
+  position: absolute; /* REQUIRED */
+  left: 16px;
+  right: 16px;
+  bottom: 24px;
+  background: rgba(22,38,52,0.72);
+  color: #f2f6f8;
+  border-radius: 8px;
+  z-index: 18;
+  padding: 12px;
+  overflow: hidden;
+  min-height: 140px;
+}
+
+/* article text */
+.hero article .text { padding-right: 12px; }
+
+/* article image must float right */
+.hero article img {
+  float: right; /* REQUIRED */
+  display: block;
+  max-width: 150px;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  border-left: 2px solid rgba(255,255,255,0.06);
+  margin-left: 12px;
+}
+
+/* clearfix */
+.hero article::after { content: ""; display: table; clear: both; }
+
+/* HISTORY section */
+.history { margin-top: 12px; padding: 16px; background:#fff; border-radius:8px; box-shadow: 0 6px 14px rgba(20,30,40,0.04); }
+.history h2 { color:var(--primary); margin-bottom:8px; }
+
+/* ADVENTURES: gallery with at least 5 figures */
+.adventures { margin-top: 16px; }
+.gallery { display:grid; grid-template-columns: repeat(5, 1fr); gap:12px; }
+.gallery figure { background:#fff; border-radius:8px; overflow:hidden; text-align:center; box-shadow:0 6px 14px rgba(20,30,40,0.04); }
+.gallery img { width:100%; height:160px; object-fit:cover; display:block; }
+.gallery figcaption { padding:8px; color:var(--accent); font-size:.95rem; }
+
+/* Footer: single <p> and social nav (social links must not be underlined) */
+footer { margin-top: 24px; padding: 18px 0; color:var(--dark); }
+.footer-inner { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.footer-inner p { margin: 0; }
+.socialmedia { display:flex; gap:10px; align-items:center; justify-content:flex-end; }
+
+/* social links remove underline */
+.socialmedia a { text-decoration: none; color: inherit; }
+.socialmedia a img { width:36px; height:36px; display:block; }
+
+/* accessibility focus */
+a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
+
+/* responsive */
+@media (max-width: 1000px) {
+  .gallery { grid-template-columns: repeat(3, 1fr); }
+  .hero article { left: 10px; right: 10px; bottom: 20px; min-height: auto; }
+  .hero article img { max-width: 130px; }
+}
+@media (max-width: 700px) {
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .hero article img { float: none; width: 100%; height: 200px; margin: 0 0 10px 0; border-left: none; border-top: 2px solid rgba(255,255,255,0.06); }
+}
+@media (max-width: 420px) {
+  .gallery { grid-template-columns: 1fr; }
+  .logo-wrap img { width:96px; height:96px; }
 }
