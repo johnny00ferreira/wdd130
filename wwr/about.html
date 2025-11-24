@@ -1,130 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Whitewater rafting is a type of recreation that involves navigating in a non-motorized vessel on free-flowing rivers.">
-    <meta name="author" content="Johnny Ferreira da Silva">
-    <link rel="stylesheet" href="styles/rafting.css">
-    <title>About Us | Living the Extraordinary</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Living the Extraordinary - aventuras de rafting seguras e inesquecíveis" />
+    <meta name="author" content="Johnny Ferreira da Silva" />
+    <link rel="stylesheet" href="styles/rafting.css" />
+    <title>Sobre Nós — Living the Extraordinary</title>
 </head>
-
 
 <body>
 
-    <header>
-        <img src="images/logo-rafting.png" alt="Rafting Logo" width="150" height="150">
+    <a class="skip-link" href="#maincontent">Pular para o conteúdo</a>
 
-        <nav>
-            <ul class="navigation">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="trips.html">Trips</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-
-
-    <main>
-        <div class="hero">
-            <h1>Living the Extraordinary</h1>
-            <article>
-                <div class="text">
-                    <h2>About Us</h2>
-
-                    <p>
-                        Living the Extraordinary is driven by a clear purpose: to lead people into authentic, safe, and
-                        unforgettable adventures powered by the force of nature. Our mission is to deliver rafting
-                        experiences that combine excitement, professionalism, and a deep connection to the environment.
-
-                        We are guided by three essential values: safety, respect for nature, and teamwork — pillars that
-                        ensure every run is carried out with excellence and responsibility.
-
-                        Our motto captures who we are and what we stand for: “Pushing limits, paddling together.”
-
-                    </p>
-                </div>
-
-                <img src="images/rafting.jpg" alt="working happily">
-            </article>
+    <!-- HEADER (Grid: logo à esquerda, nav à direita) -->
+    <header class="site-header" role="banner">
+        <div class="logo-wrap">
+            <a href="index.html" aria-label="Página inicial">
+                <img src="images/logo-rafting.png" alt="Logotipo Living the Extraordinary" width="120" height="120">
+            </a>
         </div>
 
-        <section>
-            <h2>History</h2>
-            <p>
-                Living the Extraordinary was born from the dream of a small group of adventurers passionate about
-                rivers, nature, and challenges. In its early years, the team carried out independent expeditions,
-                exploring
-                rapids across the country and studying professional safety and guiding techniques. With every descent,
-                the
-                desire to transform that passion into something greater grew — an experience capable of inspiring others
-                to
-                live beyond the ordinary.
+        <!-- nav e título alinhados à direita (grid coloca aqui) -->
+        <div class="header-right">
+            <div class="site-title">
+                <h1>Living the Extraordinary</h1>
+                <p class="tagline">Pushing limits, paddling together</p>
+            </div>
 
-                In 2018, that dream took shape and Living the Extraordinary was officially founded, with the mission of
-                offering rafting activities that combine adrenaline, safety, and respect for the environment. Since
-                then, the company has expanded its structure, specialized its guides, invested in certified equipment,
-                and
-                strengthened its reputation as a reference in outdoor adventure experiences.
+            <nav class="main-nav" role="navigation" aria-label="Navegação principal">
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" aria-current="page">Sobre nós</a></li>
+                    <li><a href="trips.html">Viagens</a></li>
+                    <li><a href="contact.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-                Today, Living the Extraordinary remains true to its roots: sharing transformative adventures, connecting
-                people with nature, and showing that with courage and teamwork, anyone can discover the extraordinary
-                within themselves.
-            </p>
+    <!-- MAIN -->
+    <main id="maincontent">
+        <!-- HERO / About -->
+        <section class="hero" aria-label="Sobre a empresa">
+            <div class="hero-inner">
+                <article class="hero-article">
+                    <div class="text">
+                        <h2>Sobre nós</h2>
+                        <h3>Quem somos</h3>
+                        <p>
+                            Somos uma equipe de guias e entusiastas que transforma rios e corredeiras em experiências
+                            seguras
+                            e transformadoras. Priorizamos segurança, respeito pela natureza e trabalho em equipe.
+                        </p>
+                    </div>
+
+                    <!-- imagem principal (use uma versão otimizada) -->
+                    <img src="images/rafting.jpg" alt="Equipe de rafting remando" width="600" height="360"
+                        loading="lazy" />
+                </article>
+            </div>
         </section>
 
-        <section class="adventures">
-            <h2>Adventure Awaits You!</h2>
-
-            <figure>
-                <img src="images/figure1.jpg" alt="Rafting Image 1">
-                <figcaption>teamwork</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/figure2.jpg" alt="Rafting Image 2">
-                <figcaption>Teamwork on the river</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/figure3.jpg" alt="Rafting Image 3">
-                <figcaption>making the most of it</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/figure4.jpg" alt="Rafting Image 4">
-                <figcaption>Family-friendly rafting</figcaption>
-            </figure>
-
-            <figure>
-                <img src="images/figure5.jpg" alt="Rafting Image 5">
-                <figcaption>river adventure</figcaption>
-            </figure>
+        <!-- HISTORY (organizado conforme wireframe) -->
+        <section class="history" aria-label="História da empresa">
+            <h2>História</h2>
+            <div class="history-grid">
+                <p>
+                    Nascemos do sonho de alguns aventureiros em explorar rios e partilhar experiências que desafiam o
+                    comum.
+                    Em 2018 formalizamos a operação: investimento em equipamentos certificados, treinamento de guias e
+                    foco em
+                    práticas sustentáveis. Desde então ampliamos rotas e mantivemos a missão de inspirar confiança e
+                    coragem.
+                </p>
+                <p>
+                    Atualmente oferecemos corridas em diferentes níveis, programas familiares e expedições guiadas. Cada
+                    atividade é preparada com checklists de segurança e atendimento personalizado.
+                </p>
+            </div>
         </section>
 
+        <!-- ADVENTURES (5 figuras alinhadas horizontalmente com figcaption) -->
+        <section class="adventures" aria-label="Aventuras e corredeiras">
+            <h2>Aventura te espera!</h2>
+
+            <div class="gallery" aria-hidden="false">
+                <figure>
+                    <img src="images/figure1.jpg" alt="Los Dientes del Diablo - corredeira" loading="lazy" width="400"
+                        height="260">
+                    <figcaption>Los Dientes del Diablo</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/figure2.jpg" alt="Big Mallard - corredeira" loading="lazy" width="400"
+                        height="260">
+                    <figcaption>Big Mallard</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/figure3.jpg" alt="Half Day Adventure - passeio de meio dia" loading="lazy"
+                        width="400" height="260">
+                    <figcaption>Half Day Adventure</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/figure4.jpg" alt="Upper Rapids - corredeira superior" loading="lazy" width="400"
+                        height="260">
+                    <figcaption>Upper Rapids</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/figure5.jpg" alt="Family Float - passeio para família" loading="lazy" width="400"
+                        height="260">
+                    <figcaption>Family Float</figcaption>
+                </figure>
+            </div>
+        </section>
     </main>
 
-    <footer>
+    <!-- FOOTER -->
+    <footer role="contentinfo">
+        <div class="footer-inner">
+            <p class="copyright">© 2025 Living the Extraordinary</p>
 
-        <nav class="socialmedia">
-            <a href="https://facebook.com">
-                <img src="images/socialmedia-facebook.png" alt="Facebook">
-            </a>
-            <a href="https://linkedin.com">
-                <img src="images/socialmedia-linkedin.png" alt="LinkedIn">
-            </a>
-            <a href="https://instagram.com">
-                <img src="images/socialmedia-instagram.png" alt="Instagram">
-            </a>
-        </nav>
-        <p>© 2025 Living the Extraordinary | Desenvolvido por Johnny Ferreira Da Silva</p>
+            <nav class="socialmedia" aria-label="Redes sociais">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <img src="images/socialmedia-facebook.png" alt="Facebook" width="36" height="36">
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <img src="images/socialmedia-linkedin.png" alt="LinkedIn" width="36" height="36">
+                </a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img src="images/socialmedia-instagram.png" alt="Instagram" width="36" height="36">
+                </a>
+            </nav>
+        </div>
+
+        <p class="developer">Desenvolvido por Johnny Ferreira Da Silva</p>
     </footer>
 
-
-
-</body>
-
-</html>
+    <
