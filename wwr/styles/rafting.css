@@ -1,13 +1,9 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* -------------------------
-   CSS variables (all used)
-   ------------------------- */
 :root {
   --bg: #ffffff;
   --primary: #03558c;
@@ -15,8 +11,8 @@
   --dark: #162534;
   --muted: #6b7280;
   --container: 1100px;
-  
 }
+
 
 /* -------------------------
    Base styles
