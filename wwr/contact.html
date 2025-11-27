@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Living the Extraordinary — company contact page">
-    <meta name="author" content="Johnny Ferreira da Silva">
-    <link rel="stylesheet" href="styles/contact.css">
-    <title>
-        <title>Living the Extraordinary Rafting — Contact </title>
-    </title>
+    <meta name="description"
+        content="Contact Living the Extraordinary for questions, support, and information about our rafting adventures.">
+    <link rel="stylesheet" href="styles/rafting.css">
+    <meta name="author" content="Johnny Ferreira">
+    <title>Living the Extraordinary Rafting — Contact</title>
 </head>
+
 
 <body>
 
@@ -25,7 +25,7 @@
 
         <div class="header-right">
             <div class="site-title">
-                <h2 class="visually-hidden">Living the Extraordinary</h2>
+                <span class="visually-hidden">Living the Extraordinary</span>
                 <p class="tagline">Pushing limits, paddling together</p>
             </div>
 
@@ -48,7 +48,7 @@
             <p> Av. Cabo Branco, 3880
                 joão pessoa, Paraiba
                 (83) 4002-8222
-                <a href="Rafting.extraordinary-contact.email.com">Rafting.extraordinary83-contact.email.com</a>
+                <a href="rafting.extraordinary-contact.email.com">rafting.extraordinary83-contact.email.com</a>
             </p>
         </section>
 
@@ -62,50 +62,50 @@
                 </iframe>
             </div>
 
-            <form class="contact-form" action="#" method="post">
+            <form class="contact-form" action="#" method="post" id="contact-form">
+
                 <div class="form-field">
                     <label for="name">Name</label>
-                    <input id="name" name="name" type="text" placeholder="Placeholder" required>
+                    <input id="name" name="name" type="text" placeholder="Your full name" required>
                 </div>
 
                 <div class="form-field">
                     <label for="email">Email</label>
-                    <input id="email" name="email" type="email" placeholder="Placeholder" required>
+                    <input id="email" name="email" type="email" placeholder="you@example.com" required>
                 </div>
 
-                <fieldset class="form-field">
-                    <legend>Message Purpose</legend>
+                <fieldset class="form-field" aria-labelledby="purpose-legend">
+                    <legend id="purpose-legend">Message Purpose</legend>
 
-                    <label>
-                        <input type="radio" name="purpose" value="general inquiry" checked>
-                        General Inquiry
-                    </label>
+                    <div>
+                        <input id="purpose-general" name="purpose" type="radio" value="general" checked>
+                        <label for="purpose-general">General Inquiry</label>
+                    </div>
 
-                    <label>
-                        <input type="radio" name="purpose" value="reservation question">
-                        Reservation Question
-                    </label>
+                    <div>
+                        <input id="purpose-reservation" name="purpose" type="radio" value="reservation">
+                        <label for="purpose-reservation">Reservation Question</label>
+                    </div>
 
-                    <label>
-                        <input type="radio" name="purpose" value="website suggestion">
-                        Website Suggestion
-                    </label>
+                    <div>
+                        <input id="purpose-suggestion" name="purpose" type="radio" value="suggestion">
+                        <label for="purpose-suggestion">Website Suggestion</label>
+                    </div>
                 </fieldset>
 
                 <div class="form-field">
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Type here"></textarea>
+                    <textarea id="message" name="message" placeholder="Type your message here"></textarea>
                 </div>
 
                 <div class="form-field checkbox-field">
-                    <label>
-                        <input type="checkbox" id="subscribe" name="subscribe">
-                        Please subscribe me to the monthly newsletter
-                    </label>
+                    <input id="subscribe" name="subscribe" type="checkbox">
+                    <label for="subscribe">Please subscribe me to the monthly newsletter</label>
                 </div>
 
                 <button type="submit" class="contact-btn">Get in Touch!</button>
             </form>
+
         </section>
 
 
