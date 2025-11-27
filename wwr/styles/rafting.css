@@ -84,7 +84,7 @@ header, main, footer { max-width: var(--container); margin: 0 auto; padding: 0 1
 .hero {
   position: relative; 
   margin: calc(var(--gap) * 1.5) 0;
-  background: url("../images/fundo-rafting.jpg") center/cover no-repeat;
+  background: url(wwr/images/fundo-rafting.jpg) center/cover no-repeat;
   min-height: 320px;
   border-radius: var(--radius);
 }
