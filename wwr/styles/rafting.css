@@ -14,9 +14,7 @@
 }
 
 
-/* -------------------------
-   Base styles
-   ------------------------- */
+
 html, body { height: 100%; }
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -27,7 +25,7 @@ body {
   padding-bottom: calc(var(--gap) * 2);
 }
 
-/* Skip link */
+
 .skip-link {
   position: absolute;
   left: -9999px;
@@ -48,10 +46,10 @@ body {
   z-index: 999;
 }
 
-/* Containers */
+
 header, main, footer { max-width: var(--container); margin: 0 auto; padding: 0 16px; }
 
-/* Header grid */
+
 .site-header {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -61,43 +59,42 @@ header, main, footer { max-width: var(--container); margin: 0 auto; padding: 0 1
   border-bottom: 1px solid #ececec;
 }
 
-/* Logo */
+
 .logo-wrap img { display:block; width:120px; height:120px; object-fit:contain; border-radius: var(--radius); }
 
-/* Header right (title + nav) */
+
 .header-right { display:flex; flex-direction:column; gap: calc(var(--gap) / 2); align-items:flex-end; }
 .site-title h1 { font-family: "Times New Roman", Georgia, serif; color:var(--primary); font-size:1.35rem; }
 .site-title .tagline { font-size:0.95rem; color:var(--muted); }
 
-/* Navigation (Flex) */
+
 .main-nav { justify-self: end; }
 .navigation { list-style:none; display:flex; gap: 12px; align-items:center; }
 .navigation li a {
   padding:8px 12px;
   border-radius: calc(var(--radius) / 1.2);
   color:var(--dark);
-  text-decoration:none; /* nav links no underline */
+  text-decoration:none; 
   font-weight:600;
 }
 .navigation li a[aria-current="page"] { background:var(--primary); color:#fff; }
 
-/* -------------------------
-   HERO overlay rules (required)
-   ------------------------- */
+
+
 .hero {
-  position: relative; /* REQUIRED by verifier */
+  position: relative; 
   margin: calc(var(--gap) * 1.5) 0;
   background: url("../images/fundo-rafting.jpg") center/cover no-repeat;
   min-height: 320px;
   border-radius: var(--radius);
 }
 
-/* hero image fallback if present */
+
 .hero img { display:block; width:100%; height:auto; }
 
-/* h1 overlay */
+
 .hero h1 {
-  position: absolute; /* REQUIRED */
+  position: absolute; 
   top: 16px;
   left: 16px;
   right: 16px;
@@ -110,9 +107,9 @@ header, main, footer { max-width: var(--container); margin: 0 auto; padding: 0 1
   line-height: 1.1;
 }
 
-/* article overlay under the hero */
+
 .hero article {
-  position: absolute; /* REQUIRED */
+  position: absolute; 
   left: 16px;
   right: 16px;
   bottom: 24px;
@@ -125,12 +122,12 @@ header, main, footer { max-width: var(--container); margin: 0 auto; padding: 0 1
   min-height: 140px;
 }
 
-/* article text */
+
 .hero article .text { padding-right: 12px; }
 
-/* article image must float right (required) */
+
 .hero article img {
-  float: right; /* REQUIRED */
+  float: right;
   display: block;
   max-width: 150px;
   width: auto;
@@ -140,19 +137,14 @@ header, main, footer { max-width: var(--container); margin: 0 auto; padding: 0 1
   margin-left: 12px;
 }
 
-/* clearfix for floats */
 .hero article::after { content: ""; display: table; clear: both; }
 
-/* -------------------------
-   HISTORY section
-   ------------------------- */
+
 .history { margin-top: 12px; padding: 16px; background:#fff; border-radius: var(--radius); box-shadow: 0 6px 14px rgba(20,30,40,0.04); }
 .history h2 { color:var(--primary); margin-bottom: 8px; }
 .history p { color: var(--dark); }
 
-/* -------------------------
-   ADVENTURES gallery
-   ------------------------- */
+
 .adventures { margin-top: 16px; }
 .gallery {
   display: grid;
@@ -164,24 +156,20 @@ header, main, footer { max-width: var(--container); margin: 0 auto; padding: 0 1
 .gallery img { width:100%; height:160px; object-fit:cover; display:block; }
 .gallery figcaption { padding: 8px; color: var(--accent); font-size: .95rem; }
 
-/* -------------------------
-   Footer and social links
-   ------------------------- */
+
 footer { margin-top: 24px; padding: calc(var(--gap) * 1.2) 0; color:var(--dark); }
 .footer-inner { display:flex; align-items:center; justify-content:space-between; gap: 10px; }
 .footer-inner p { margin: 0; }
 .socialmedia { display:flex; gap: 10px; align-items:center; justify-content:flex-end; }
 
-/* social links: remove underline (required) */
+
 .socialmedia a { text-decoration: none; color: inherit; }
 .socialmedia a img { width:36px; height:36px; display:block; border-radius: calc(var(--radius) / 4); }
 
-/* focus visible uses variable --focus (now used) */
+
 a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: calc(var(--radius) / 2); }
 
-/* -------------------------
-   Responsiveness
-   ------------------------- */
+
 @media (max-width: 1000px) {
   .gallery { grid-template-columns: repeat(3, 1fr); }
   .hero article { left: 10px; right: 10px; bottom: 20px; min-height: auto; }
