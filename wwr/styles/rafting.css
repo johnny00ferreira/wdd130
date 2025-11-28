@@ -97,7 +97,7 @@ header, main, footer {
 .hero {
   position: relative; 
   margin: calc(var(--gap) * 1.5) 0;
-background: url("../images/background-rafting.jpg") center/cover no-repeat;
+  background: url("../images/background-rafting.jpg") center/cover no-repeat;
   border-radius: var(--radius);
 }
 
