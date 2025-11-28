@@ -183,3 +183,7 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-r
   .gallery { grid-template-columns: 1fr; }
   .logo-wrap img { width:96px; height:96px; }
 }
+.map-iframe {
+    width: 100%;
+    border: 0; 
+}
