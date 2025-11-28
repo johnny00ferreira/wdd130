@@ -2,8 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
+} 
+ 
 :root {
   --bg: #ffffff;
   --primary: #03558c;
@@ -11,6 +11,11 @@
   --dark: #162534;
   --muted: #6b7280;
   --container: 1100px;
+  --gap: 16px;
+  --radius: 12px;
+  --focus: #ffb400;
+  --card-bg: #ffffff;
+  --card-border: #ececec;
 }
 
 
@@ -47,7 +52,13 @@ body {
 }
 
 
-header, main, footer { max-width: var(--container); margin: 0 auto; padding: 0 16px; }
+header, main, footer { 
+  max-width: 
+  var(--container); 
+  margin: 0 auto; 
+  padding: 0 16px;
+  }
+
 
 
 .site-header {
@@ -77,15 +88,16 @@ header, main, footer { max-width: var(--container); margin: 0 auto; padding: 0 1
   text-decoration:none; 
   font-weight:600;
 }
-.navigation li a[aria-current="page"] { background:var(--primary); color:#fff; }
+.navigation li a[aria-current="page"] {
+   background:var(--primary); 
+   color:#fff; }
 
 
 
 .hero {
   position: relative; 
   margin: calc(var(--gap) * 1.5) 0;
-  background: url(wwr/images/fundo-rafting.jpg) center/cover no-repeat;
-  min-height: 320px;
+background: url("../images/background-rafting.jpg") center/cover no-repeat;
   border-radius: var(--radius);
 }
 
