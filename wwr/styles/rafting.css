@@ -53,8 +53,7 @@ body {
 
 
 header, main, footer { 
-  max-width: 
-  var(--container); 
+  max-width: var(--container); 
   margin: 0 auto; 
   padding: 0 16px;
   }
@@ -200,7 +199,8 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-r
     border: 0; 
 }
 
-.site-title .tagline {
+.site-title .tagline { 
+    font-size: 0.95rem; 
     color: var(--dark);
 }
 
