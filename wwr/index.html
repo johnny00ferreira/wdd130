@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description"
-        content="Living the Extraordinary — whitewater rafting adventures, professional guides, and unforgettable experiences.">
-    <meta name="author" content="Johnny Ferreira">
-    <link rel="stylesheet" href="styles/rafting.css">
+        content="Living the Extraordinary — whitewater rafting adventures, professional guides, and unforgettable experiences." />
+    <meta name="author" content="Johnny Ferreira" />
+    <link rel="stylesheet" href="styles/rafting.css" />
     <title>Rafting Living the Extraordinary — Home</title>
 </head>
 
@@ -17,7 +17,7 @@
 
     <header class="site-header">
         <div class="logo-wrap">
-            <a href="index.html">
+            <a href="index.html" aria-label="Home — Living the Extraordinary">
                 <img src="images/logo-rafting.png" alt="Rafting Logo" width="120" height="120">
             </a>
         </div>
@@ -28,7 +28,7 @@
                 <p class="tagline">Pushing limits, paddling together</p>
             </div>
 
-            <nav class="main-nav">
+            <nav class="main-nav" role="navigation" aria-label="Main navigation">
                 <ul class="navigation">
                     <li><a href="index.html" aria-current="page">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
@@ -39,60 +39,61 @@
         </div>
     </header>
 
-    <main id="maincontent">
+    <main id="main">
 
-
-        <section class="hero">
-            <div class="hero-text">
-                <h1>Welcome to Living the Extraordinary</h1>
-                <p>Your next adventure begins here — experience professional, safe, and unforgettable whitewater rafting
-                    with certified guides.</p>
-                <a class="cta-button" href="trips.html">Explore Our Trips</a>
-            </div>
-
+     
         <section class="hero" aria-label="Hero">
-            <div class="hero-overlay">
-                <h1>Welcome to Living the Extraordinary</h1>
-                <p>Your next adventure begins here — experience professional, safe, and unforgettable whitewater rafting with
-                    certified guides.</p>
-                <a class="cta-button" href="trips.html">Explore Our Trips</a>
-            </div>
+            
+            <h1>Welcome to Living the Extraordinary</h1>
+
+            <article>
+                <div class="text">
+                    <h2>About Us</h2>
+                    <p>
+                        Living the Extraordinary is a team of certified guides and river enthusiasts dedicated to
+                        creating authentic,
+                        professional, and safe rafting experiences. We connect people with nature through adventure,
+                        teamwork, and respect
+                        for the environment.
+                    </p>
+                </div>
+
+                <img src="images/rafting.jpg" alt="Rafting team paddling on the river" width="600" height="360">
+            </article>
         </section>
 
-        <section class="newsletter" aria-label="Newsletter signup" style="margin-top:20px;">
-            <div class="container" style="max-width:var(--container);margin:0 auto;padding:0 16px;">
+        <section class="about-preview" style="margin-top:18px;">
+            <h2>Who We Are</h2>
+            <p>
+                We provide exciting, safe whitewater rafting trips for individuals and groups. Our certified guides and
+                well-maintained
+                equipment make every trip memorable. Explore our trip options to find the right adventure for you.
+            </p>
+            <a class="cta-link" href="about.html">Read More About Us →</a>
+        </section>
+
+        <section class="newsletter" aria-label="Newsletter signup" style="margin-top:18px;">
+            <div style="max-width:var(--container);margin:0 auto;padding:0 16px;">
                 <h2>Join Our Newsletter</h2>
-                <p>Receive trip updates, special offers and safety tips. We won't spam — unsubscribe anytime.</p>
-        
+                <p>Get trip updates, special offers, and river safety tips. Unsubscribe anytime.</p>
+
                 <form id="newsletter-form" class="contact-form" action="#" method="post" novalidate>
                     <div class="form-field">
                         <label for="nl-name">Name</label>
                         <input id="nl-name" name="name" type="text" placeholder="Your full name" required>
                     </div>
-        
+
                     <div class="form-field">
                         <label for="nl-email">Email</label>
                         <input id="nl-email" name="email" type="email" placeholder="you@example.com" required>
                     </div>
-        
+
                     <button type="submit" class="contact-btn">Subscribe</button>
                 </form>
             </div>
         </section>
 
-        <section class="about-preview">
-            <h2>Who We Are</h2>
-            <p>
-                Living the Extraordinary is a team of passionate river guides dedicated to connecting people with
-                nature.
-                We believe in adventure, teamwork, and respect for the environment. Learn more about our story and
-                mission.
-            </p>
-            <a class="cta-link" href="about.html">Read More About Us →</a>
-        </section>
-
-    
-        <section class="home-gallery">
+        <section class="home-gallery" aria-label="Experience the Adventure" style="margin-top:18px;">
             <h2>Experience the Adventure</h2>
 
             <div class="gallery">
@@ -110,27 +111,25 @@
                     <img src="images/figure3.jpg" alt="Half Day Adventure rafting" width="400" height="260">
                     <figcaption>Half Day Adventure</figcaption>
                 </figure>
+
+                <figure>
+                    <img src="images/figure4.jpg" alt="Upper Rapids whitewater" width="400" height="260">
+                    <figcaption>Upper Rapids</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/figure5.jpg" alt="Family Float rafting trip" width="400" height="260">
+                    <figcaption>Family Float</figcaption>
+                </figure>
             </div>
 
-            <a class="cta-link" href="trips.html">Check All Trips →</a>
+            <a class="cta-link" href="trips.html" style="display:inline-block;margin-top:12px;">Explore Our Trips →</a>
         </section>
 
-        
-        <section class="contact-preview">
-            <h2>Get in Touch</h2>
-            <p>
-                Have questions? Need help with reservations?
-                Our team is ready to assist you — contact us today.
-            </p>
-
-            <a class="cta-button" href="contact.html">Contact Us</a>
-        </section>
-
-        
-        <section class="team-preview">
+        <section class="team-preview" style="margin-top:22px;">
             <h2>Meet Our Team</h2>
 
-            <div class="employee-list">
+            <div class="employee-list" aria-label="Team list">
                 <figure class="employee-item">
                     <img src="images/employee-1.jpg" alt="GABRIEL supervisor" width="200" height="200">
                     <figcaption>GABRIEL — Supervisor</figcaption>
@@ -147,23 +146,23 @@
                 </figure>
             </div>
 
-            <a class="cta-link" href="contact.html">See Contact Page →</a>
+            <a class="cta-link" href="contact.html" style="display:inline-block;margin-top:12px;">Contact Us →</a>
         </section>
 
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="footer-inner">
             <p>© 2025 Living the Extraordinary | Developed by Johnny Ferreira Da Silva</p>
 
-            <nav class="socialmedia">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <nav class="socialmedia" aria-label="Social media links">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                     <img src="images/socialmedia-facebook.png" alt="Facebook" width="36" height="36">
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <img src="images/socialmedia-linkedin.png" alt="LinkedIn" width="36" height="36">
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                     <img src="images/socialmedia-instagram.png" alt="Instagram" width="36" height="36">
                 </a>
             </nav>
