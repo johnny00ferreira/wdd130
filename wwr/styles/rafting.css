@@ -372,12 +372,6 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-r
   border-radius: 8px;
 }
 
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
 legend {
   font-weight: 600;
   color: var(--primary);
