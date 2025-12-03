@@ -42,29 +42,27 @@
     </header>
 
 
-    <main>
-        <section>
-            <h1>Contact page for the company Rafting Living the Extraordinary</h1>
-            <p> Av. Cabo Branco, 3880
-                joão pessoa, Paraiba
-                (83) 4002-8222
-                <a href="mailto:info@rafting.com">info@rafting.com</a>
+    <main id="maincontent" role="main">
 
+        <section class="company-info" aria-label="Informações da empresa">
+            <h1>Contact page for the company Rafting Living the Extraordinary</h1>
+            <p>
+                Av. Cabo Branco, 3880<br>
+                joão pessoa, Paraiba<br>
+                (83) 4002-8222<br>
+                <a href="mailto:info@rafting.com">info@rafting.com</a>
             </p>
         </section>
 
-        <section class="contact-location">
-            <h2>Contact & Map</h2>
-            <div class="map-frame" aria-label="Company location map" role="region">
-                <iframe title="Map showing company location - Av. Cabo Branco, João Pessoa"
-                    src="https://www.google.com/maps/embed?pb=..." class="map-iframe" height="360" allowfullscreen=""
-                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+        <section class="contact-wrapper" aria-label="Contato e localização">
 
+            <div class="contact-map" role="region" aria-label="location-company-map">
+                <iframe title="Map showing company location - Av. Cabo Branco, João Pessoa"
+                    src="https://www.google.com/maps/embed?pb=..." class="map-iframe" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
-            <form class="contact-form" action="#" method="post" id="contact-form">
-
+            <form class="contact-form" action="#" method="post" id="contact-form" aria-label="Formulário de contato">
                 <div class="form-field">
                     <label for="name">Name</label>
                     <input id="name" name="name" type="text" placeholder="Your full name" required>
@@ -109,8 +107,7 @@
 
         </section>
 
-
-        <section class="employees">
+        <section class="employees" aria-label="Equipe da empresa">
             <h2>We Are Here to Serve You</h2>
 
             <div class="employee-list">
@@ -131,8 +128,8 @@
             </div>
         </section>
 
-
     </main>
+
 
 
     <footer>
