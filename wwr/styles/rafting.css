@@ -110,7 +110,6 @@ header, main, footer {
 }
 
 .hero {
-  background-image: url("../images/rafting.jpg");
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -189,7 +188,7 @@ header, main, footer {
 
 .gallery {
   display: grid;
-  /* opção responsiva: auto-fit/minmax */
+
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: var(--gap);
   margin-top: 12px;
@@ -250,6 +249,11 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-r
   margin-top: 20px;
   align-items: start;
 }
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
 
 .contact-location iframe,
 .contact-map iframe {
@@ -258,12 +262,6 @@ a:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-r
   border: 0;
   border-radius: 8px;
   display: block;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
 }
 
 .form-field label {
